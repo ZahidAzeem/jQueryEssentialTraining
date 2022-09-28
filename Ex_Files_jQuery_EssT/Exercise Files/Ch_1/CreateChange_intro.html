@@ -5,12 +5,30 @@
     <link rel="stylesheet" href="../style.css"/>
     <script type="text/javascript" src="../jquery-1.11.1.js"></script>
     <script type="text/javascript">
+    
+        
+        jQuery("document").ready(function(){
+            var newPP = $("<P>");
+            newPP.append("<em>Hello there with exampel</em>");
+            
+            jQuery("#exampel").html(newPP);
+            //append this text to the id selector
+            //$("#creation").prepend("Watch this ").css("border", "3px solid red");
+            
+            //change the existing content
+            //$("#example").html("<h2>This is new H2</h2>");
+            //$("#example").html("<h2>This was new H2</h2>");
+            //replacing simple text using text 
+            $("#example").text("<h2>This is simple text with H2 tag.</h2>");
+            $("")
+        }); 
+        
         $("document").ready(function () {
             // create some new content
             var newP = $("<p>");
             newP.append("<em>Hello There</em>");
             
-            $("#example").html(newP);
+            //jQuery("#example").html(newP);
             
             //$("#creation").prepend("Watch This! ");
             
@@ -23,6 +41,7 @@
 </head>
 <body>
 	<h1 id="intro">Using jQuery to Create/Change Content</h1>
+    <p  class="intro"></p>
 	<p>jQuery makes it very easy to create new page content and change existing page content.</p>
     <h2 id="creation">Content Creation</h2>
     <p>Creating new content is as simple as passing a string of HTML to the $() function.</p>
@@ -30,7 +49,7 @@
     <h2 id="changing">Changing Content</h2>
     <p>There are multiple ways to change page content using jQuery, depending on your needs.</p>
     <p>The <code>html()</code> and <code>text()</code> functions can be used to directly manipulate the contents of elements, and there are ways to control how content can be inserted and moved around in the page.</p>
-    <div id="example">
-    </div>
+    <div id="example"></div>
+    
 </body>
 </html>

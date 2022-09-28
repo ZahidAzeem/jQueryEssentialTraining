@@ -7,10 +7,13 @@
     <script type="text/javascript">
         $("document").ready(function() {
             $("#go").click(function() {
-                    $("#testDiv").animate({width: 400}, 300)
+                    $("#testDiv")
+                    .animate({width: 400}, 300)
                     .animate({height: 300}, 400)
                     .animate({left: 200}, 500)
-                    .animate({top: "+=100", borderWidth: 10}, "slow")});
+                    .animate({left: 200}, 500)
+                    .animate({top: "+=100", borderWidth: 10}, "slow")
+            });
         });
     </script>
 <style>
@@ -31,6 +34,6 @@
     <h1>Quick jQuery Animation Intro</h1>
     <p>jQuery provides some basic animation features for showing and hiding elements, as well as a low-level animation function that can be used to animate several CSS properties (as long as they are numeric).</p>
     <button id="go">Go</button>
-    <div id="testDiv"></div>
+ <div id="testDiv"></div>
 </body>
 </html>

@@ -4,25 +4,60 @@
     <title>jQuery Event Handling</title>
     <link rel="stylesheet" href="../style.css"/>
     <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+    
     <script type="text/javascript">
-        $("document").ready(function() {
+            $("document").ready(function() {
             $("#example").on("mousemove", onMouseOver);
             $("#example").on("click", onMouseClick);
             $("#example").on("mouseleave", onMouseLeave);
         });
         
-        function onMouseOver(evt) {
+                function onMouseOver(evt) {
             $("#example").text(evt.type + ": " + evt.pageX + ", " + evt.pageY
                                + "\n" + "Button: " + evt.which + 
                                " Key: " + evt.metaKey);
         }
+        
         function onMouseClick(evt) {
             $("#example").text(evt.type + ": " + evt.pageX + ", " + evt.pageY);
             $("#example").off("mousemove", onMouseOver);
         }
+
         function onMouseLeave(evt) {
             $("#example").text("mouseleave");
         }
+        
+        
+        /* your test code
+        jQuery("document").ready(function(){
+           jQuery("#example").on("mousemove",onMouseOver);
+            //jQuery("#example").on("click",onMouseClick);
+            jQuery("#example").on("mouseleave", onMouseLeave);
+        });
+        */
+
+        
+        // mouse event handling functions
+        
+        /* 
+        // your test code
+        function onMouseOver(evt){
+            $("#example").text(evt.type + ": " + evt.pageX + ", " + evt.pageY
+                              + "\n" + "Button: " + evt.which + 
+                              " Key: " + evt.metaKey);
+        }
+        //your code
+        function onMouseClick(evt){
+            jQuery("#example").text(evt.type + ": " + evt.pageX + ", " + evt.pageY);
+            jQuery("#example").off("mousemove", onMouseOver);
+        }
+        
+        // your code
+        function onMouseLeave(evt){
+            $("#example").text("mouseleave");
+        }
+        */
+
     </script>
 </head>
 <body>

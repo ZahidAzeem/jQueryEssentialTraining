@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../style.css"/>
     <script type="text/javascript" src="../jquery-1.11.1.js"></script>
     <script type="text/javascript">
+        /*
         $("document").ready(function() {
             $("#getcontent").click(getContent);
             $("#loadhtml").click(loadHTML);
@@ -21,8 +22,39 @@
         
         function loadHTML() {
             $("#example").load("samplehtml.html");
+        } 
+        */
+    </script>
+    <script type="text/javascript">
+        jQuery("document").ready(function(){
+           jQuery("#getcontent").click(getContent);
+            jQuery("#loadhtml").click(loadHTML);
+            jQuery("#checkValues").click(checkValues);
+        });
+        
+        function getContent(){
+            jQuery.ajax("sampletextcontent.txt",
+                       {success: setContent, type:"GET",dataType:"text"});
+        }
+        
+        function setContent(data,status,jqxhr){
+            jQuery("#example").text(data);
+        }
+        
+        function loadHTML(){
+            jQuery("#example").load("samplehtml.html");
+        }
+        
+        function checkValues(){
+            var x = "";
+            if ( x ) {
+              jQuery("#checkDiv").append("<h2>x defaulted to true</h2>" );
+            } else {
+              jQuery("#checkDiv").append("<h1>x defaulted to false</h2>" );
+            }
         }
     </script>
+    
 </head>
 <body>
     <h1>AJAX and jQuery</h1>
@@ -33,7 +65,10 @@
     </ul>
     <div id="example">
     </div>
+
     <button id="getcontent">Get Text</button>
     <button id="loadhtml">Load HTML</button>
+    <button id="checkValues">Check var value</button>
+    <div id="checkDiv"></div>
 </body>
 </html>

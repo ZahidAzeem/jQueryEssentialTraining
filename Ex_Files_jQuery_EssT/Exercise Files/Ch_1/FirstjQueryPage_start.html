@@ -8,10 +8,16 @@
     <script type="text/javascript" src="../jquery-1.11.1.js"></script>
     <!-- insert the script to display the Hello World message here -->
     <script type="text/javascript">
-        /*$("document").ready(function() {
+        jQuery("document").ready(function(){
+            jQuery("body").append("<p>The page just loaded first time.!</P>");
+            jQuery("body").append("<p>The page just loaded first time.!</P>");
+        });
+                                 
+        
+        $("document").ready(function() {
             $("body").append("<p>The page just loaded!</p>");
         });
-        */
+        /*
         window.addEventListener("DOMContentLoaded", function(evt) {
         var elem = document.getElementsByTagName("body")[0];
         var para = document.createElement("p");
@@ -19,7 +25,7 @@
         para.appendChild(text);
         elem.appendChild(para);
     });
-
+*/
     </script>
 
 </head>
