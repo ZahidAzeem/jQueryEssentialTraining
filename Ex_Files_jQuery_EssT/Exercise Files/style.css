@@ -14,6 +14,16 @@ body {
     padding-right: 10pt;
     min-height: 200px;
 }
+#example2 {
+    border: 2px dotted gray;
+    background-color: #ffccdd;
+    font-size:14pt;
+    font-family: "monospace";
+    font-style: oblique;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    min-height: 200px;
+}
 
 .box {
     border: 1px solid gray;

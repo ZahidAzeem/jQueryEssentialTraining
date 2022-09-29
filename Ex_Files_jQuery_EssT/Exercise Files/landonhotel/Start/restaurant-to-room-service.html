@@ -4,6 +4,15 @@
 <title>Room Service | The Landon Hotel</title>
 <link rel="stylesheet" href="style/style.css">
 <script src="../../jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+    
+        jQuery("document").ready(function(){
+            //jQuery("#restaurants li").contents("veg").append("'(V)'");
+            jQuery("#restaurants li[data-type='veg']")
+                .css("color","red")
+                .append(" (v)");
+        });
+    </script>
 </head>
 <body class="room-service">
 	<div class="container">
