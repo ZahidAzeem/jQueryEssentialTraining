@@ -1,4 +1,79 @@
-// css_start.htm
+
+
+//data_start.html
+/*
+jQuery("document").ready(function(){
+        $("#show").click(function (evt) {
+            // if there is any data, display it.
+            alert(JSON.stringify($("#example").data(), null, "  "));
+            });
+        $("#store").click(function (evt) {
+            // store some arbitrary data on DIV
+            $("#example").data("key1", 1234);
+            $("#example").data("key2", "Joe Marini");
+        });
+        $("#remove").click(function (evt) {  
+            // clear the data from the DIV
+            $("#example").removeData("key1");
+        });
+    
+});
+*/
+//CSS_start.htm
+/*
+jQuery("document").ready(function(){
+        $(function() {
+            showValues();
+            //DataShow();
+            
+         $("#example").mouseover(changeValues);
+         $("#example").mouseleave(resetValues);
+        });
+        
+        function resetValues(){
+            jQuery("#example").height(150);
+            jQuery("#example").width(600);
+            DataShow();
+        }
+
+        function changeValues() 
+            {
+            $("#example").height(100);
+            $("#example").width(200);
+            
+            showValues();
+                
+            }
+        
+        function showValues() 
+            {
+            $("#height").html($("#example").height());
+            $("#width").html($("#example").width());
+            $("#innerH").html($("#example").innerHeight());
+            $("#innerW").html($("#example").innerWidth());
+            $("#outerH").html($("#example").outerHeight());
+            $("#outerW").html($("#example").outerWidth());
+            $("#offset").html($("#example").offset().top + ", " + 
+                            $("#example").offset().left);
+            $("#position").html($("#example").position().top + ", " + 
+                                $("#example").position().left);
+            }
+    
+        function DataShow(){
+            jQuery("#height").html(jQuery("#example").height());
+            jQuery("#width").html(jQuery("#example").width());
+            jQuery("#innerH").html(jQuery("#example").innerHeight());
+            jQuery("#innerW").html(jQuery("#example").innerWidth());
+            jQuery("#outerH").html(jQuery("#example").outerHeight());
+            jQuery("#outerW").html(jQuery("#example").outerWidth());
+            jQuery("#offset").html(jQuery("#example").offset().top + ", " +
+                jQuery("#example").offset().left);
+            jQuery("#position").html(jQuery("#example").position().top + ", " + 
+                                    jQuery("#example").position().left);
+    }
+});
+*/
+// Props_start.htm
 /*
 jQuery("document").ready(function(){
 

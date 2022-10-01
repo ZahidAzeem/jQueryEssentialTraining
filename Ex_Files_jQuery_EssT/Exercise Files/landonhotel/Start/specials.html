@@ -4,6 +4,26 @@
 <title>Specials | The Landon Hotel</title>
 <link rel="stylesheet" href="style/style.css">
 <script src="../../jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+                jQuery("document").ready(function(){
+            
+        var headings = jQuery(".content h2");
+        var list = jQuery("<ul id='bookmarks'>");
+        var cAnchorCount =0;
+        
+        headings.each(function(index, elem){
+            
+                jQuery(this).html("<a name='bookmark" + cAnchorCount + "'></a>" +
+                             jQuery(this).html());
+            
+                list.append(jQuery("<li><a href='#bookmark" + cAnchorCount++ + "'> " +
+                                  jQuery(this).text() + "</a></li>" ));
+        });
+        
+        jQuery(".content h1").after(list);
+            
+        });
+    </script>
 </head>
 <body>
 	<div class="container">
