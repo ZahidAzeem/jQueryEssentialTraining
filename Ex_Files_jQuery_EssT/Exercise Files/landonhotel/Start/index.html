@@ -4,6 +4,25 @@
 <title>The Landon Hotel</title>
 <link rel="stylesheet" href="style/style.css">
 <script src="../../jquery-1.11.1.js"></script>
+    <script type="text/javascript" >
+        jQuery("document").ready(function(){
+            //set interval 
+            setInterval("rotateImages()",3000);
+            
+        });
+        function rotateImages(){
+            var oCurPhoto = jQuery("#hero div.current");
+            var onNxtPhoto = oCurPhoto.next();
+            if(onNxtPhoto.length == 0)
+                onNxtPhoto = jQuery("#hero div:first");
+            
+            oCurPhoto.removeClass("current").addClass("previous");
+            onNxtPhoto.css({opacity:0.0}).addClass("current")
+            .animate({opacity:1.0},1000, function(){
+                oCurPhoto.removeClass("previous");
+            });
+        }
+    </script>
 </head>
 <body>
 	<div class="container">
